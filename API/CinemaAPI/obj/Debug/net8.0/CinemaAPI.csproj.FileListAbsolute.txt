@@ -1,0 +1,242 @@
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\appsettings.json
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\CinemaAPI.staticwebassets.endpoints.json
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\CinemaAPI.exe
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\CinemaAPI.deps.json
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\CinemaAPI.runtimeconfig.json
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\CinemaAPI.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\CinemaAPI.pdb
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Humanizer.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Npgsql.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.CodeDom.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.csproj.AssemblyReference.cache
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.AssemblyInfoInputs.cache
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.AssemblyInfo.cs
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.csproj.CoreCompileInputs.cache
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\scopedcss\bundle\CinemaAPI.styles.css
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\staticwebassets.build.json
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\staticwebassets.development.json
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\swae.build.ex.cache
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.csproj.Up2Date
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\refint\CinemaAPI.dll
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.pdb
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.genruntimeconfig.cache
+D:\Admin\Telegram Desktop\Cinema (2)\Cinema\API\CinemaAPI\obj\Debug\net8.0\ref\CinemaAPI.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\appsettings.json
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\CinemaAPI.staticwebassets.endpoints.json
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\CinemaAPI.exe
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\CinemaAPI.deps.json
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\CinemaAPI.runtimeconfig.json
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\CinemaAPI.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\CinemaAPI.pdb
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Humanizer.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Npgsql.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.CodeDom.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.csproj.AssemblyReference.cache
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.AssemblyInfoInputs.cache
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.AssemblyInfo.cs
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.csproj.CoreCompileInputs.cache
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\scopedcss\bundle\CinemaAPI.styles.css
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\staticwebassets.build.json
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\staticwebassets.development.json
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\swae.build.ex.cache
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.csproj.Up2Date
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\refint\CinemaAPI.dll
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.pdb
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\CinemaAPI.genruntimeconfig.cache
+D:\Studying\3_course\_Практика\УП 2\Cinema\API\CinemaAPI\obj\Debug\net8.0\ref\CinemaAPI.dll

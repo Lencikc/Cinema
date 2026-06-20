@@ -1,0 +1,649 @@
+[
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "AddBarItem",
+    "RelativePath": "cinema/admin/baritem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.AddBarItemModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "EditBarItem",
+    "RelativePath": "cinema/admin/baritem/{barItemID}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barItemID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.AddBarItemModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "DeleteBarItem",
+    "RelativePath": "cinema/admin/baritem/{barItemID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "barItemID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "Dashboard",
+    "RelativePath": "cinema/admin/dashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "DeleteUser",
+    "RelativePath": "cinema/admin/deleteuser/{userID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "EditUser",
+    "RelativePath": "cinema/admin/edituser",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.EditUserModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "AddHall",
+    "RelativePath": "cinema/admin/hall",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.AddHallModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "DeleteHall",
+    "RelativePath": "cinema/admin/hall/{hallID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hallID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "Halls",
+    "RelativePath": "cinema/admin/halls",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "AddMovie",
+    "RelativePath": "cinema/admin/movie",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.AddMovieModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "EditMovie",
+    "RelativePath": "cinema/admin/movie",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.EditMovieModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "DeleteMovie",
+    "RelativePath": "cinema/admin/movie/{movieID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "AddPromo",
+    "RelativePath": "cinema/admin/promo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.AddPromoModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "DeletePromo",
+    "RelativePath": "cinema/admin/promo/{promoID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "promoID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "Promos",
+    "RelativePath": "cinema/admin/promos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "Sales",
+    "RelativePath": "cinema/admin/sales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "AddShow",
+    "RelativePath": "cinema/admin/show",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.AddShowModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "DeleteShow",
+    "RelativePath": "cinema/admin/show/{showID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "showID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.AdminController",
+    "Method": "Users",
+    "RelativePath": "cinema/admin/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.ScannerController",
+    "Method": "Attendance",
+    "RelativePath": "cinema/attendance/{showID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "showID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.PublicController",
+    "Method": "BarItems",
+    "RelativePath": "cinema/bar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.CashierController",
+    "Method": "SellBar",
+    "RelativePath": "cinema/cashier/bar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.BarOrderModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.CashierController",
+    "Method": "RefundTicket",
+    "RelativePath": "cinema/cashier/refund/{ticketID}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ticketID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.CashierController",
+    "Method": "RefundTicketByQr",
+    "RelativePath": "cinema/cashier/refund/qr",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.CheckTicketModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.CashierController",
+    "Method": "SellTickets",
+    "RelativePath": "cinema/cashier/sell",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.BuyTicketModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.CashierController",
+    "Method": "Shift",
+    "RelativePath": "cinema/cashier/shift",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.PublicController",
+    "Method": "Movies",
+    "RelativePath": "cinema/movies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.PublicController",
+    "Method": "Movie",
+    "RelativePath": "cinema/movies/{movieID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.PublicController",
+    "Method": "ShowsByMovie",
+    "RelativePath": "cinema/movies/{movieID}/shows",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "movieID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.LoginController",
+    "Method": "GetProfile",
+    "RelativePath": "cinema/profile/{userID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.RefsController",
+    "Method": "AgeRatings",
+    "RelativePath": "cinema/refs/ageratings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.RefsController",
+    "Method": "BarCategories",
+    "RelativePath": "cinema/refs/barcategories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.RefsController",
+    "Method": "Genres",
+    "RelativePath": "cinema/refs/genres",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.ScannerController",
+    "Method": "Scan",
+    "RelativePath": "cinema/scan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.CheckTicketModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.PublicController",
+    "Method": "Show",
+    "RelativePath": "cinema/shows/{showID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "showID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.PublicController",
+    "Method": "SeatMap",
+    "RelativePath": "cinema/shows/{showID}/seats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "showID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.LoginController",
+    "Method": "SignIn",
+    "RelativePath": "cinema/signin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.SignInModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.LoginController",
+    "Method": "SignUp",
+    "RelativePath": "cinema/signup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.SignUpModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.ScannerController",
+    "Method": "Today",
+    "RelativePath": "cinema/today",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.UploadController",
+    "Method": "Upload",
+    "RelativePath": "cinema/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.UserController",
+    "Method": "BarOrder",
+    "RelativePath": "cinema/user/{userID}/bar/order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.BarOrderModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.UserController",
+    "Method": "MyBarOrders",
+    "RelativePath": "cinema/user/{userID}/bar/orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.UserController",
+    "Method": "BuyTickets",
+    "RelativePath": "cinema/user/{userID}/buy",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "CinemaAPI.Requests.BuyTicketModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CinemaAPI.Controllers.UserController",
+    "Method": "MyTickets",
+    "RelativePath": "cinema/user/{userID}/tickets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

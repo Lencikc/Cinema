@@ -1,0 +1,240 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\api\\cinemaapi\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|solutionrelative:cinemaapi\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\api\\cinemaapi\\hubs\\cinemahub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|solutionrelative:cinemaapi\\hubs\\cinemahub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\api\\cinemaapi\\universalmethods\\qrcodemaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|solutionrelative:cinemaapi\\universalmethods\\qrcodemaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\api\\cinemaapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|solutionrelative:cinemaapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\api\\cinemaapi\\services\\cashierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|solutionrelative:cinemaapi\\services\\cashierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\api\\cinemaapi\\services\\controllerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|solutionrelative:cinemaapi\\services\\controllerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\api\\cinemaapi\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|solutionrelative:cinemaapi\\services\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\api\\cinemaapi\\services\\publicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|solutionrelative:cinemaapi\\services\\publicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\api\\cinemaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|solutionrelative:cinemaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\api\\cinemaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|solutionrelative:cinemaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\api\\cinemaapi\\models\\agerating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|solutionrelative:cinemaapi\\models\\agerating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\api\\cinemaapi\\migrations\\20260505185828_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1E12345-3F2A-4B5C-9876-1234567890AB}|CinemaAPI\\CinemaAPI.csproj|solutionrelative:cinemaapi\\migrations\\20260505185828_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ControllerService.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Services\\ControllerService.cs",
+              "RelativeDocumentMoniker": "CinemaAPI\\Services\\ControllerService.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Services\\ControllerService.cs",
+              "RelativeToolTip": "CinemaAPI\\Services\\ControllerService.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T19:58:26.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Services\\LoginService.cs",
+              "RelativeDocumentMoniker": "CinemaAPI\\Services\\LoginService.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Services\\LoginService.cs",
+              "RelativeToolTip": "CinemaAPI\\Services\\LoginService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T19:58:19.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PublicService.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Services\\PublicService.cs",
+              "RelativeDocumentMoniker": "CinemaAPI\\Services\\PublicService.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Services\\PublicService.cs",
+              "RelativeToolTip": "CinemaAPI\\Services\\PublicService.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T19:58:03.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20260505185828_First.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Migrations\\20260505185828_First.cs",
+              "RelativeDocumentMoniker": "CinemaAPI\\Migrations\\20260505185828_First.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Migrations\\20260505185828_First.cs",
+              "RelativeToolTip": "CinemaAPI\\Migrations\\20260505185828_First.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T18:58:28.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QrCodeMaker.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\UniversalMethods\\QrCodeMaker.cs",
+              "RelativeDocumentMoniker": "CinemaAPI\\UniversalMethods\\QrCodeMaker.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\UniversalMethods\\QrCodeMaker.cs",
+              "RelativeToolTip": "CinemaAPI\\UniversalMethods\\QrCodeMaker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T18:56:55.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CinemaHub.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Hubs\\CinemaHub.cs",
+              "RelativeDocumentMoniker": "CinemaAPI\\Hubs\\CinemaHub.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Hubs\\CinemaHub.cs",
+              "RelativeToolTip": "CinemaAPI\\Hubs\\CinemaHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:42:27.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Services\\AdminService.cs",
+              "RelativeDocumentMoniker": "CinemaAPI\\Services\\AdminService.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Services\\AdminService.cs",
+              "RelativeToolTip": "CinemaAPI\\Services\\AdminService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T18:55:56.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CashierService.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Services\\CashierService.cs",
+              "RelativeDocumentMoniker": "CinemaAPI\\Services\\CashierService.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Services\\CashierService.cs",
+              "RelativeToolTip": "CinemaAPI\\Services\\CashierService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwBAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T19:58:38.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "CinemaAPI\\Services\\UserService.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Services\\UserService.cs",
+              "RelativeToolTip": "CinemaAPI\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T19:59:08.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "CinemaAPI\\appsettings.json",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\appsettings.json",
+              "RelativeToolTip": "CinemaAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-05T18:57:13.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Program.cs",
+              "RelativeDocumentMoniker": "CinemaAPI\\Program.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Program.cs",
+              "RelativeToolTip": "CinemaAPI\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T18:56:45.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AgeRating.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Models\\AgeRating.cs",
+              "RelativeDocumentMoniker": "CinemaAPI\\Models\\AgeRating.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\API\\CinemaAPI\\Models\\AgeRating.cs",
+              "RelativeToolTip": "CinemaAPI\\Models\\AgeRating.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T18:55:41.131Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
