@@ -1,0 +1,83 @@
+@implements IDisposable
+@inject CinemaRazor.Services.AuthState Auth
+@inject NavigationManager Nav
+
+<nav class="navbar navbar-expand-lg sticky-top" style="background:rgba(10,14,26,.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,.06);">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-white" href="/">
+            Cinema<span class="text-warning">.</span>
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#topnav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="topnav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><NavLink class="nav-link nav-link-cinema" href="afisha">Афиша</NavLink></li>
+                <li class="nav-item"><NavLink class="nav-link nav-link-cinema" href="bar">Бар</NavLink></li>
+
+                @if (Auth.IsViewer)
+                {
+                    <li class="nav-item"><NavLink class="nav-link nav-link-cinema" href="my-tickets">Мои билеты</NavLink></li>
+                    <li class="nav-item"><NavLink class="nav-link nav-link-cinema" href="my-bar">Мои заказы</NavLink></li>
+                }
+
+                @if (Auth.IsCashier)
+                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-link-cinema dropdown-toggle" data-bs-toggle="dropdown" href="#">Касса</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><NavLink class="dropdown-item" href="cashier">Билеты</NavLink></li>
+                            <li><NavLink class="dropdown-item" href="cashier-bar">Бар</NavLink></li>
+                            <li><NavLink class="dropdown-item" href="cashier-shift">Смена</NavLink></li>
+                        </ul>
+                    </li>
+                }
+
+                @if (Auth.IsScanner)
+                {
+                    <li class="nav-item"><NavLink class="nav-link nav-link-cinema" href="scan">Сканировать</NavLink></li>
+                    <li class="nav-item"><NavLink class="nav-link nav-link-cinema" href="today-shows">Сегодня</NavLink></li>
+                }
+
+                @if (Auth.IsAdmin)
+                {
+                    <li class="nav-item"><NavLink class="nav-link nav-link-cinema" href="dashboard">Дашборд</NavLink></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-link-cinema dropdown-toggle" data-bs-toggle="dropdown" href="#">Управление</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><NavLink class="dropdown-item" href="admin/movies">Фильмы</NavLink></li>
+                            <li><NavLink class="dropdown-item" href="admin/halls">Залы</NavLink></li>
+                            <li><NavLink class="dropdown-item" href="admin/shows">Сеансы</NavLink></li>
+                            <li><NavLink class="dropdown-item" href="admin/bar">Бар-товары</NavLink></li>
+                            <li><NavLink class="dropdown-item" href="admin/promos">Промокоды</NavLink></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><NavLink class="dropdown-item" href="admin/users">Пользователи</NavLink></li>
+                            <li><NavLink class="dropdown-item" href="admin/sales">Продажи</NavLink></li>
+                        </ul>
+                    </li>
+                }
+            </ul>
+
+            <div class="d-flex align-items-center gap-2">
+                <NavLink class="btn btn-outline-warning btn-sm rounded-pill px-3" href="account">
+                    <i class="bi bi-person me-1"></i>@(Auth.IsLogged ? Auth.Current!.FirstName : "Кабинет")
+                </NavLink>
+                @if (Auth.IsLogged)
+                {
+                    <button class="btn btn-outline-light btn-sm rounded-circle" @onclick="DoLogout" title="Выход">
+                        <i class="bi bi-box-arrow-right"></i>
+                    </button>
+                }
+            </div>
+        </div>
+    </div>
+</nav>
+
+@code {
+    protected override void OnInitialized() { Auth.Changed += Refresh; }
+    private void Refresh() { InvokeAsync(StateHasChanged); }
+    private void DoLogout() { Auth.Clear(); Nav.NavigateTo("/"); }
+    public void Dispose() { Auth.Changed -= Refresh; }
+}

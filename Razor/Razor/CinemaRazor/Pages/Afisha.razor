@@ -1,0 +1,134 @@
+﻿@page "/afisha"
+@using CinemaRazor.Models
+@using System.Text.Json
+@using CinemaRazor.Requests
+@using CinemaRazor.Services
+@inject Api Api
+@inject NavigationManager Nav
+
+<PageTitle>Афиша</PageTitle>
+
+<h1 class="text-white mb-4">Афиша кинотеатра</h1>
+
+<div class="card bg-dark border-secondary mb-4">
+    <div class="card-body">
+        <div class="row g-2 align-items-end">
+            <div class="col-12 col-md-5">
+                <label class="form-label text-white-50 small">Поиск по названию</label>
+                <input class="form-control" placeholder="Введите название..." @bind="search" @bind:event="oninput" />
+            </div>
+            <div class="col-6 col-md-3">
+                <label class="form-label text-white-50 small">Жанр</label>
+                <select class="form-select" @bind="genreFilter">
+                    <option value="0">Все</option>
+                    @foreach (var g in genres)
+                    {
+                        <option value="@g.GenreID">@g.GenreName</option>
+                    }
+                </select>
+            </div>
+            <div class="col-6 col-md-2">
+                <label class="form-label text-white-50 small">Возраст</label>
+                <select class="form-select" @bind="ageFilter">
+                    <option value="0">Любой</option>
+                    @foreach (var a in ages)
+                    {
+                        <option value="@a.AgeRatingID">@a.Label</option>
+                    }
+                </select>
+            </div>
+            <div class="col-12 col-md-2 text-end">
+                <span class="badge bg-secondary fs-6">Найдено: @Filtered.Count</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (movies == null)
+{
+    <p class="text-white-50">Загрузка...</p>
+}
+else if (Filtered.Count == 0)
+{
+    <div class="alert alert-warning">Фильмов по вашему запросу не найдено</div>
+}
+else
+{
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+        @foreach (var m in Filtered)
+        {
+            <div class="col">
+                <div class="card bg-dark border-secondary h-100" @onclick="@(() => Nav.NavigateTo($"/movie/{m.MovieID}"))" style="cursor:pointer;">
+                    <img src="@PosterFor(m)" class="card-img-top" style="aspect-ratio:2/3;object-fit:cover;" alt="@m.Title" />
+                    <div class="card-body">
+                        <h5 class="card-title text-white">@m.Title</h5>
+                        <p class="card-text text-white-50 small">@m.GenreName · @m.DurationMinutes мин · @m.ReleaseYear</p>
+                        <div>
+                            <span class="badge bg-danger me-1">@m.AgeRatingLabel</span>
+                            <span class="badge bg-secondary">@m.GenreName</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-secondary">
+                        <button class="btn btn-warning btn-sm w-100">
+                            <i class="bi bi-ticket-perforated me-1"></i>Купить билет
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<MovieDto>? movies;
+    private List<GenreDto> genres = new();
+    private List<AgeRatingDto> ages = new();
+    private string search = "";
+    private int genreFilter;
+    private int ageFilter;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadRefs();
+        await Load();
+    }
+
+    private async Task LoadRefs()
+    {
+        var rg = await Api.Get("/cinema/refs/genres");
+        if (rg != null && rg.Value.TryGetProperty("genres", out var ag))
+            genres = JsonSerializer.Deserialize<List<GenreDto>>(ag.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+
+        var ra = await Api.Get("/cinema/refs/ageratings");
+        if (ra != null && ra.Value.TryGetProperty("ageRatings", out var aa))
+            ages = JsonSerializer.Deserialize<List<AgeRatingDto>>(aa.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+    }
+
+    private async Task Load()
+    {
+        var r = await Api.Get("/cinema/movies");
+        if (r != null && r.Value.TryGetProperty("movies", out var arr))
+            movies = JsonSerializer.Deserialize<List<MovieDto>>(arr.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+    }
+
+    private string PosterFor(MovieDto m) =>
+        string.IsNullOrEmpty(m.PosterUrl) ? $"https://picsum.photos/seed/film{m.MovieID}/400/600" : m.PosterUrl;
+
+    private List<MovieDto> Filtered
+    {
+        get
+        {
+            var list = movies ?? new();
+            if (!string.IsNullOrWhiteSpace(search))
+                list = list.Where(m => m.Title.Contains(search, StringComparison.OrdinalIgnoreCase)).ToList();
+            if (genreFilter > 0)
+                list = list.Where(m => m.GenreID == genreFilter).ToList();
+            if (ageFilter > 0)
+                list = list.Where(m => m.AgeRatingID == ageFilter).ToList();
+            return list;
+        }
+    }
+}

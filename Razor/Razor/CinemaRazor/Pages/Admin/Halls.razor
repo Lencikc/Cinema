@@ -1,0 +1,93 @@
+﻿@page "/admin/halls"
+@using CinemaRazor.Models
+@using CinemaRazor.Requests
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+
+<PageTitle>Залы</PageTitle>
+
+<div class="page-header">
+    <div><h1 class="page-title">Кинозалы</h1><p class="page-subtitle">Управление залами и схемой мест</p></div>
+</div>
+
+@if (!Auth.IsAdmin)
+{
+    <div class="alert alert-danger">Только администраторам</div>
+}
+else
+{
+    <div class="card-dark mb-3">
+        <h5 class="section-title">Добавить зал</h5>
+        <div class="row g-2">
+            <div class="col-12 col-md-3"><label class="app-label">Название *</label><input class="form-control" @bind="add.HallName" /></div>
+            <div class="col-6 col-md-2"><label class="app-label">Тип *</label><input class="form-control" @bind="add.HallType" /></div>
+            <div class="col-6 col-md-2"><label class="app-label">Рядов *</label><input class="form-control" type="number" min="1" @bind="add.RowsCount" /></div>
+            <div class="col-6 col-md-2"><label class="app-label">Мест в ряду *</label><input class="form-control" type="number" min="1" @bind="add.SeatsPerRow" /></div>
+            <div class="col-6 col-md-3 d-flex align-items-end"><button class="btn btn-warning w-100" @onclick="DoAdd">Добавить зал</button></div>
+        </div>
+    </div>
+
+    @if (halls != null)
+    {
+        <div class="row g-3">
+            @foreach (var h in halls)
+            {
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="card-dark">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h5 class="section-title mb-0">@h.HallName</h5>
+                            <button class="btn btn-sm btn-outline-danger" @onclick="() => DoDelete(h.HallID)"><i class="bi bi-trash"></i></button>
+                        </div>
+                        <div class="page-subtitle">Тип: @h.HallType</div>
+                        <div class="page-subtitle">Рядов: @h.RowsCount, мест в ряду: @h.SeatsPerRow</div>
+                        <div style="color:#fbbf24; font-size:18px; font-weight:700;">Всего мест: @(h.RowsCount * h.SeatsPerRow)</div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+}
+
+@inject CinemaRazor.Services.Toast Toast
+
+@code {
+    private List<HallDto>? halls;
+    private AddHallModel add = new();
+
+    protected override async Task OnInitializedAsync() => await Load();
+
+    private async Task Load()
+    {
+        var r = await Api.Get("/cinema/admin/halls");
+        if (r != null && r.Value.TryGetProperty("halls", out var arr))
+            halls = JsonSerializer.Deserialize<List<HallDto>>(arr.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+    }
+
+    private async Task DoAdd()
+    {
+        if (string.IsNullOrWhiteSpace(add.HallName)) { Toast.Error("Введите название"); return; }
+        if (string.IsNullOrWhiteSpace(add.HallType)) { Toast.Error("Введите тип зала"); return; }
+        if (add.RowsCount <= 0) { Toast.Error("Рядов должно быть больше 0"); return; }
+        if (add.SeatsPerRow <= 0) { Toast.Error("Мест в ряду должно быть больше 0"); return; }
+
+        var r = await Api.Post("/cinema/admin/hall", add);
+        if (r == null) { Toast.Error("Сервер не отвечает"); return; }
+        if (r.Value.GetProperty("status").GetBoolean())
+        {
+            Toast.Success("Зал добавлен");
+            add = new();
+            await Load();
+        }
+        else Toast.Error(r.Value.TryGetProperty("message", out var m) ? m.GetString() ?? "Ошибка" : "Ошибка");
+    }
+
+    private async Task DoDelete(int id)
+    {
+        var r = await Api.Delete($"/cinema/admin/hall/{id}");
+        if (r != null && r.Value.GetProperty("status").GetBoolean()) { Toast.Success("Удалено"); await Load(); }
+        else Toast.Error("Ошибка удаления");
+    }
+}

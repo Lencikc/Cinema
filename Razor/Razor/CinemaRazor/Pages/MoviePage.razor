@@ -1,0 +1,78 @@
+﻿@page "/movie/{Id:int}"
+@using CinemaRazor.Models
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject NavigationManager Nav
+
+<PageTitle>@(movie?.Title ?? "Фильм")</PageTitle>
+
+@if (movie == null)
+{
+    <div class="text-center text-white-50 py-5">Загрузка...</div>
+}
+else
+{
+    <div class="row g-4 mb-4">
+        <div class="col-12 col-md-4">
+            <img src="@PosterFor()" class="img-fluid rounded shadow"
+                 style="width:100%; aspect-ratio:2/3; object-fit:cover;" alt="@movie.Title" />
+        </div>
+        <div class="col-12 col-md-8">
+            <div class="d-flex gap-2 mb-2">
+                <span class="badge text-bg-danger">@movie.AgeRatingLabel</span>
+                <span class="badge rounded-pill text-bg-secondary">@movie.GenreName</span>
+                <span class="badge rounded-pill text-bg-secondary">@movie.DurationMinutes мин</span>
+                <span class="badge rounded-pill text-bg-secondary">@movie.ReleaseYear</span>
+            </div>
+            <h1 class="text-white fw-bold mb-3">@movie.Title</h1>
+            <p class="text-white-50">@movie.Description</p>
+
+            <h4 class="text-white mt-4 mb-3">Расписание сеансов</h4>
+            @if (shows == null || shows.Count == 0)
+            {
+                <p class="text-white-50">Сеансы пока не запланированы</p>
+            }
+            else
+            {
+                <div class="d-flex flex-wrap gap-3">
+                    @foreach (var s in shows)
+                    {
+                        <div class="bg-white rounded-3 p-3 text-dark" style="min-width:130px; cursor:pointer;" @onclick="@(() => Nav.NavigateTo($"/buy/{s.ShowID}"))">
+                            <div class="fs-5 fw-bold">@s.StartTime.ToLocalTime().ToString("d")</div>
+                            <div class="fs-5 fw-bold">@s.StartTime.ToLocalTime().ToString("HH:mm")</div>
+                            <div class="small text-muted">@s.BasePrice.ToString("0") ₽</div>
+                            <div class="small text-uppercase text-muted mt-1">2D • @s.HallName</div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private MovieDto? movie;
+    private List<ShowDto>? shows;
+
+    private string PosterFor() =>
+        movie != null && !string.IsNullOrEmpty(movie.PosterUrl)
+            ? movie.PosterUrl
+            : $"https://picsum.photos/seed/p{Id}/400/600";
+
+    protected override async Task OnInitializedAsync() => await Load();
+
+    private async Task Load()
+    {
+        var rm = await Api.Get($"/cinema/movies/{Id}");
+        if (rm != null && rm.Value.TryGetProperty("movie", out var mv))
+            movie = JsonSerializer.Deserialize<MovieDto>(mv.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+        var rs = await Api.Get($"/cinema/movies/{Id}/shows");
+        if (rs != null && rs.Value.TryGetProperty("shows", out var sh))
+            shows = JsonSerializer.Deserialize<List<ShowDto>>(sh.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+    }
+}

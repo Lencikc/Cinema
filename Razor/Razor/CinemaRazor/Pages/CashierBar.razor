@@ -1,0 +1,105 @@
+﻿@page "/cashier-bar"
+@using CinemaRazor.Models
+@using CinemaRazor.Requests
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+
+<PageTitle>Бар-касса</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h1 class="page-title">Касса бара</h1>
+        <p class="page-subtitle">Продажа барных товаров</p>
+    </div>
+</div>
+
+@if (!Auth.IsCashier && !Auth.IsAdmin)
+{
+    <div class="alert alert-warning">Только кассирам</div>
+}
+else if (items == null)
+{
+    <div class="card-dark"><p class="page-subtitle text-center">Загрузка...</p></div>
+}
+else
+{
+    <div class="row g-3">
+        <div class="col-12 col-lg-8">
+            <div class="row g-2">
+                @foreach (var b in items)
+                {
+                    <div class="col-6 col-md-4">
+                        <div class="card-dark" style="cursor:pointer;" @onclick="() => Add(b)">
+                            <div class="movie-title" style="min-height:auto;">@b.ItemName</div>
+                            <div class="movie-meta">@b.Category</div>
+                            <div style="color:#fbbf24; font-weight:700;">@b.Price.ToString("0") ₽</div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="card-dark">
+                <h5 class="section-title">Чек</h5>
+                @if (cart.Count == 0)
+                {
+                    <p class="page-subtitle">Товары не выбраны</p>
+                }
+                else
+                {
+                    @foreach (var line in cart)
+                    {
+                        var item = items.First(i => i.BarItemID == line.BarItemID);
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span>@item.ItemName ×@line.Count</span>
+                            <span style="color:#fbbf24;">@(item.Price * line.Count)</span>
+                            <button class="btn btn-sm btn-outline-danger" @onclick="() => cart.Remove(line)"><i class="bi bi-x"></i></button>
+                        </div>
+                    }
+                    <hr style="border-color:#292524;" />
+                    <div class="d-flex justify-content-between">
+                        <strong>Итого:</strong>
+                        <strong style="color:#fbbf24;">@Total ₽</strong>
+                    </div>
+                    @if (!string.IsNullOrEmpty(msg)) { <div class="alert alert-success mt-2">@msg</div> }
+                    <button class="btn btn-warning w-100 mt-2" @onclick="Sell">Пробить</button>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private List<BarItemDto>? items;
+    private List<BarOrderLine> cart = new();
+    private string? msg;
+
+    private decimal Total => cart.Sum(c => items!.First(i => i.BarItemID == c.BarItemID).Price * c.Count);
+
+    protected override async Task OnInitializedAsync()
+    {
+        var r = await Api.Get("/cinema/bar");
+        if (r != null && r.Value.TryGetProperty("items", out var arr))
+            items = JsonSerializer.Deserialize<List<BarItemDto>>(arr.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+    }
+
+    private void Add(BarItemDto b)
+    {
+        var ex = cart.FirstOrDefault(c => c.BarItemID == b.BarItemID);
+        if (ex != null) ex.Count++; else cart.Add(new BarOrderLine { BarItemID = b.BarItemID, Count = 1 });
+    }
+
+    private async Task Sell()
+    {
+        msg = null;
+        var r = await Api.Post("/cinema/cashier/bar", new BarOrderModel { Lines = cart });
+        if (r != null && r.Value.GetProperty("status").GetBoolean())
+        {
+            msg = $"Чек на {r.Value.GetProperty("total").GetDecimal()} ₽ пробит";
+            cart.Clear();
+        }
+    }
+}

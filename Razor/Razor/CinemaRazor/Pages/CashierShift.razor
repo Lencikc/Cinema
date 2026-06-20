@@ -1,0 +1,93 @@
+﻿@page "/cashier-shift"
+@using CinemaRazor.Requests
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+@inject Toast Toast
+
+<PageTitle>Смена</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h1 class="page-title">Кассовая смена</h1>
+        <p class="page-subtitle">Текущая смена, выручка и возвраты</p>
+    </div>
+    <button class="btn btn-outline-light btn-sm" @onclick="Load">Обновить</button>
+</div>
+
+@if (data == null)
+{
+    <div class="card-dark"><p class="page-subtitle text-center">Загрузка...</p></div>
+}
+else
+{
+    var s = data.Value.GetProperty("shift");
+    <div class="row g-3">
+        <div class="col-6 col-md-3">
+            <div class="dash-tile"><div class="dash-tile-label">Билетов</div><div class="dash-tile-value">@s.GetProperty("ticketsCount").GetInt32()</div></div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="dash-tile"><div class="dash-tile-label">Билеты ₽</div><div class="dash-tile-value">@s.GetProperty("ticketsSum").GetDecimal().ToString("0")</div></div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="dash-tile"><div class="dash-tile-label">Бар ₽</div><div class="dash-tile-value">@s.GetProperty("barSum").GetDecimal().ToString("0")</div></div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="dash-tile"><div class="dash-tile-label">Возвраты ₽</div><div class="dash-tile-value">@s.GetProperty("refundsSum").GetDecimal().ToString("0")</div></div>
+        </div>
+    </div>
+    <div class="dash-tile mt-3">
+        <div class="dash-tile-label">Итого по смене</div>
+        <div class="dash-tile-value" style="color:#fbbf24;">@s.GetProperty("total").GetDecimal().ToString("0") ₽</div>
+    </div>
+
+    <div class="card-dark mt-3">
+        <h5 class="section-title">Возврат билета по QR-коду</h5>
+        <div class="row g-2 align-items-end">
+            <div class="col-12 col-md-7">
+                <label class="form-label text-warning small text-uppercase fw-bold mb-1">QR-код билета</label>
+                <input class="form-control bg-white text-dark border-2 border-warning"
+                       @bind="qrCode" @bind:event="oninput" @onkeydown="OnKey"
+                       placeholder="CINEMA-..." />
+            </div>
+            <div class="col-12 col-md-3">
+                <button class="btn btn-outline-danger w-100" @onclick="Refund">Оформить возврат</button>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private JsonElement? data;
+    private string qrCode = "";
+
+    protected override async Task OnInitializedAsync() => await Load();
+
+    private async Task Load()
+    {
+        if (!Auth.IsCashier && !Auth.IsAdmin) return;
+        data = await Api.Get("/cinema/cashier/shift");
+    }
+
+    private async Task OnKey(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter") await Refund();
+    }
+
+    private async Task Refund()
+    {
+        if (string.IsNullOrWhiteSpace(qrCode)) { Toast.Error("Введите QR-код"); return; }
+
+        var r = await Api.Post("/cinema/cashier/refund/qr", new CheckTicketModel { QrCode = qrCode });
+        if (r == null) { Toast.Error("Сервер не отвечает"); return; }
+
+        if (r.Value.GetProperty("status").GetBoolean())
+        {
+            Toast.Success(r.Value.TryGetProperty("message", out var m) ? m.GetString() ?? "Возврат оформлен" : "Возврат оформлен");
+            qrCode = "";
+            await Load();
+        }
+        else Toast.Error(r.Value.TryGetProperty("message", out var em) ? em.GetString() ?? "Ошибка" : "Ошибка");
+    }
+}

@@ -1,0 +1,173 @@
+﻿@page "/cashier"
+@using CinemaRazor.Models
+@using CinemaRazor.Requests
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+@inject Toast Toast
+
+<PageTitle>Касса</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h1 class="page-title">Касса — продажа билетов</h1>
+        <p class="page-subtitle">@(map == null ? "Выберите фильм и сеанс" : "Выберите места")</p>
+    </div>
+    @if (map != null)
+    {
+        <button class="btn btn-outline-secondary" @onclick="BackToList">← Назад к фильмам</button>
+    }
+</div>
+
+@if (!Auth.IsCashier && !Auth.IsAdmin)
+{
+    <div class="alert alert-warning">Доступ только для кассиров</div>
+}
+else if (map == null && selectedMovie == null)
+{
+    @if (movies == null)
+    {
+        <div class="card-dark"><p class="page-subtitle text-center">Загрузка...</p></div>
+    }
+    else if (movies.Count == 0)
+    {
+        <div class="card-dark"><p class="page-subtitle text-center">Нет активных фильмов</p></div>
+    }
+    else
+    {
+        <div class="row g-4">
+            @foreach (var m in movies)
+            {
+                <div class="col-6 col-md-4 col-xl-3">
+                    <div class="card border-0 bg-transparent text-white h-100" style="cursor:pointer;" @onclick="() => OpenMovie(m)">
+                        <div class="ratio ratio-2x3 rounded-4 overflow-hidden mb-3">
+                            <img src="@(string.IsNullOrEmpty(m.PosterUrl) ? $"https://picsum.photos/seed/m{m.MovieID}/400/600" : m.PosterUrl)"
+                                 class="w-100 h-100" style="object-fit:cover;" alt="@m.Title" />
+                        </div>
+                        <h5 class="fw-bold text-white">@m.Title</h5>
+                        <div><span class="badge rounded-pill text-bg-secondary me-1">@m.GenreName</span></div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+}
+else if (map == null && selectedMovie != null)
+{
+    <div class="card-dark mb-3">
+        <h4 class="text-white">@selectedMovie.Title</h4>
+        <p class="page-subtitle">Выберите сеанс</p>
+        @if (shows == null || shows.Count == 0)
+        {
+            <p class="text-white-50">Сеансы пока не запланированы</p>
+        }
+        else
+        {
+            <div class="d-flex flex-wrap gap-3 mt-2">
+                @foreach (var s in shows)
+                {
+                    <button class="btn btn-outline-warning" @onclick="() => OpenShow(s)">
+                        <i class="bi bi-clock me-2"></i>@s.StartTime.ToLocalTime().ToString("dd.MM HH:mm")
+                        <small class="ms-2">@s.HallName • @s.BasePrice.ToString("0") ₽</small>
+                    </button>
+                }
+            </div>
+        }
+    </div>
+}
+else if (map != null)
+{
+    <div class="card-dark">
+        <div class="screen-label">SCREEN</div>
+        <div class="seat-map">
+            <div class="screen"></div>
+            @foreach (var row in map.Rows)
+            {
+                <div class="seat-row">
+                    <div class="row-num">@row.RowNumber</div>
+                    @foreach (var s in row.Seats)
+                    {
+                        var picked = picks.Any(p => p.RowNumber == s.Row && p.SeatNumber == s.Seat);
+                        var cls = "seat" + (s.Taken ? " taken" : "") + (picked ? " selected" : "");
+                        <div class="@cls" @onclick="@(() => Toggle(s))" @key="(row.RowNumber * 1000 + s.Seat)">@s.Seat</div>
+                    }
+                </div>
+            }
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-3">
+            <div>Выбрано: <strong style="color:#fff;">@picks.Count</strong></div>
+            <div>Сумма: <strong style="color:#fbbf24;">@(picks.Count * map.BasePrice) ₽</strong></div>
+            <button class="btn btn-warning btn-lg" disabled="@(picks.Count == 0)" @onclick="Sell">
+                <i class="bi bi-receipt me-2"></i>Пробить чек
+            </button>
+        </div>
+    </div>
+}
+
+@code {
+    private List<MovieDto>? movies;
+    private MovieDto? selectedMovie;
+    private List<ShowDto>? shows;
+    private int currentShowId;
+    private SeatMapDto? map;
+    private List<SeatPick> picks = new();
+
+    protected override async Task OnInitializedAsync() => await LoadMovies();
+
+    private async Task LoadMovies()
+    {
+        var r = await Api.Get("/cinema/movies");
+        if (r != null && r.Value.TryGetProperty("movies", out var arr))
+            movies = JsonSerializer.Deserialize<List<MovieDto>>(arr.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+    }
+
+    private async Task OpenMovie(MovieDto m)
+    {
+        selectedMovie = m;
+        var r = await Api.Get($"/cinema/movies/{m.MovieID}/shows");
+        if (r != null && r.Value.TryGetProperty("shows", out var sh))
+            shows = JsonSerializer.Deserialize<List<ShowDto>>(sh.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+    }
+
+    private async Task OpenShow(ShowDto s)
+    {
+        currentShowId = s.ShowID;
+        var r = await Api.Get($"/cinema/shows/{s.ShowID}/seats");
+        if (r != null) map = JsonSerializer.Deserialize<SeatMapDto>(r.Value.GetRawText(),
+            new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        picks.Clear();
+    }
+
+    private void BackToList()
+    {
+        map = null;
+        selectedMovie = null;
+        shows = null;
+        picks.Clear();
+    }
+
+    private void Toggle(SeatDto s)
+    {
+        if (s.Taken) return;
+        var ex = picks.FirstOrDefault(p => p.RowNumber == s.Row && p.SeatNumber == s.Seat);
+        if (ex != null) picks.Remove(ex); else picks.Add(new SeatPick { RowNumber = s.Row, SeatNumber = s.Seat });
+    }
+
+    private async Task Sell()
+    {
+        var r = await Api.Post("/cinema/cashier/sell", new BuyTicketModel { ShowID = currentShowId, Seats = picks });
+        if (r == null) { Toast.Error("Сервер не отвечает"); return; }
+        if (r.Value.GetProperty("status").GetBoolean())
+        {
+            Toast.Success($"Чек на {r.Value.GetProperty("total").GetDecimal()} ₽ пробит");
+            picks.Clear();
+            var rs = await Api.Get($"/cinema/shows/{currentShowId}/seats");
+            if (rs != null) map = JsonSerializer.Deserialize<SeatMapDto>(rs.Value.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
+        else Toast.Error(r.Value.TryGetProperty("message", out var m) ? m.GetString() ?? "Ошибка" : "Ошибка");
+    }
+}

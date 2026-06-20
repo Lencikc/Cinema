@@ -1,0 +1,131 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = CinemaRazor
+build_property.RootNamespace = CinemaRazor
+build_property.ProjectDir = D:\Studying\3_course\_Практика\УП 2\Cinema\Razor\CinemaRazor\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Studying\3_course\_Практика\УП 2\Cinema\Razor\CinemaRazor
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Layout/ToastBar.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XFRvYXN0QmFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Layout/TopNav.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XFRvcE5hdi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Account.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Admin/BarItems.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQmFySXRlbXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Admin/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Admin/Halls.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSGFsbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Admin/Movies.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTW92aWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Admin/Promos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvbW9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Admin/Sales.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU2FsZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Admin/Shows.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cU2hvd3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Admin/Users.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Afisha.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWZpc2hhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Bar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Buy.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnV5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Cashier.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FzaGllci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/CashierBar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FzaGllckJhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/CashierShift.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FzaGllclNoaWZ0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/MoviePage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/MyBar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlCYXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/MyTickets.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlUaWNrZXRzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/Scan.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Nhbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/Pages/TodayShows.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG9kYXlTaG93cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Studying/3_course/_Практика/УП 2/Cinema/Razor/CinemaRazor/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 

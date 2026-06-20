@@ -1,0 +1,115 @@
+﻿@page "/admin/users"
+@using CinemaRazor.Models
+@using CinemaRazor.Requests
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+
+<PageTitle>Пользователи</PageTitle>
+
+<div class="page-header">
+    <div><h1 class="page-title">Пользователи</h1><p class="page-subtitle">Изменение ролей</p></div>
+</div>
+
+@if (!Auth.IsAdmin)
+{
+    <div class="alert alert-danger">Только администратору</div>
+}
+else if (users == null)
+{
+    <div class="card-dark"><p class="page-subtitle text-center">Загрузка...</p></div>
+}
+else
+{
+    <div class="card-dark p-0 overflow-hidden">
+        <table class="table table-dark table-hover table-striped align-middle mb-0">
+            <thead><tr class="text-warning text-uppercase small"><th class="ps-3">ID</th><th>ФИО</th><th>Email</th><th>Телефон</th><th>Роль</th><th></th></tr></thead>
+            <tbody>
+                @foreach (var u in users)
+                {
+                    <tr>
+                        <td>@u.UserID</td>
+                        <td>@u.LastName @u.FirstName @u.Patronymic</td>
+                        <td>@u.Email</td>
+                        <td>@u.Phone</td>
+                        <td>
+                            @if (editId == u.UserID)
+                            {
+                                <select class="form-select form-select-sm" @bind="editRole">
+                                    <option value="1">Администратор</option>
+                                    <option value="2">Кассир</option>
+                                    <option value="3">Зритель</option>
+                                    <option value="4">Контролёр</option>
+                                </select>
+                            }
+                            else
+                            {
+                                <span class="hero-chip">@u.RoleName</span>
+                            }
+                        </td>
+                        <td>
+                            @if (editId == u.UserID)
+                            {
+                                <button class="btn btn-sm btn-success me-1" @onclick="() => Save(u)">Ок</button>
+                                <button class="btn btn-sm btn-secondary" @onclick="() => editId = null">×</button>
+                            }
+                            else
+                            {
+                                <button class="btn btn-sm btn-warning me-1" @onclick="() => StartEdit(u)">Роль</button>
+                                @if(u.RoleID != 1)
+                                {
+                                    <button class="btn btn-sm btn-outline-danger" @onclick="() => DoDelete(u.UserID)"><i class="bi bi-trash"></i></button>
+                                }
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    private List<UserDto>? users;
+    private int? editId;
+    private int editRole;
+
+    protected override async Task OnInitializedAsync() => await Load();
+
+    private async Task Load()
+    {
+        var r = await Api.Get("/cinema/admin/users");
+        if (r != null && r.Value.TryGetProperty("users", out var arr))
+            users = JsonSerializer.Deserialize<List<UserDto>>(arr.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+    }
+
+    private void StartEdit(UserDto u)
+    {
+        editId = u.UserID;
+        editRole = u.RoleID;
+    }
+
+    private async Task Save(UserDto u)
+    {
+        var model = new EditUserModel
+        {
+            UserID = u.UserID,
+            LastName = u.LastName,
+            FirstName = u.FirstName,
+            Patronymic = u.Patronymic,
+            Phone = u.Phone,
+            RoleID = editRole
+        };
+        await Api.Put("/cinema/admin/edituser", model);
+        editId = null;
+        await Load();
+    }
+
+    private async Task DoDelete(int id)
+    {
+        await Api.Delete($"/cinema/admin/deleteuser/{id}");
+        await Load();
+    }
+}

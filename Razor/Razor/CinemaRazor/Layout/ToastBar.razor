@@ -1,0 +1,20 @@
+@implements IDisposable
+@inject CinemaRazor.Services.Toast Toast
+
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index:9999;">
+    @foreach (var t in Toast.Items)
+    {
+        <div class="toast show align-items-center text-bg-@t.Kind border-0 mb-2" role="alert" @key="t.Id">
+            <div class="d-flex">
+                <div class="toast-body">@t.Text</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" @onclick="() => Toast.Remove(t.Id)"></button>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    protected override void OnInitialized() { Toast.Changed += R; }
+    private void R() => InvokeAsync(StateHasChanged);
+    public void Dispose() { Toast.Changed -= R; }
+}

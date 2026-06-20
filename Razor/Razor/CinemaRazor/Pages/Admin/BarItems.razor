@@ -1,0 +1,168 @@
+﻿@page "/admin/bar"
+@using CinemaRazor.Models
+@using CinemaRazor.Requests
+@using System.Text.Json
+@using System.Net.Http.Headers
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+@inject Toast Toast
+@inject HttpClient Http
+
+<PageTitle>Бар (товары)</PageTitle>
+
+<div class="page-header">
+    <div><h1 class="page-title">Бар — товары</h1><p class="page-subtitle">Управление барными позициями</p></div>
+</div>
+
+@if (!Auth.IsAdmin)
+{
+    <div class="alert alert-danger">Только админу</div>
+}
+else
+{
+    <div class="card-dark mb-3">
+        <h5 class="section-title">Добавить товар</h5>
+        <div class="row g-2">
+            <div class="col-12 col-md-3">
+                <label class="app-label">Название *</label>
+                <input class="form-control" @bind="add.ItemName" />
+            </div>
+            <div class="col-6 col-md-2">
+                <label class="app-label">Категория *</label>
+                <select class="form-select" @bind="add.BarCategoryID">
+                    <option value="0">— выбрать —</option>
+                    @foreach (var c in cats) { <option value="@c.BarCategoryID">@c.CategoryName</option> }
+                </select>
+            </div>
+            <div class="col-6 col-md-2">
+                <label class="app-label">Цена *</label>
+                <input class="form-control" type="number" min="1" @bind="add.Price" />
+            </div>
+            <div class="col-6 col-md-2">
+                <label class="app-label">Остаток *</label>
+                <input class="form-control" type="number" min="0" @bind="add.StockCount" />
+            </div>
+            <div class="col-12">
+                <label class="app-label">Описание *</label>
+                <input class="form-control" @bind="add.ItemDescription" />
+            </div>
+            <div class="col-12">
+                <label class="app-label">Картинка (файл)</label>
+                <InputFile class="form-control" OnChange="OnImagePicked" accept="image/*" />
+                @if (uploading) { <small class="text-warning">Загрузка...</small> }
+                @if (!string.IsNullOrEmpty(add.ImageUrl)) { <img src="@add.ImageUrl" style="max-height:80px; margin-top:8px;" /> }
+            </div>
+            <div class="col-12 d-flex justify-content-end">
+                <button class="btn btn-warning" @onclick="DoAdd">Добавить</button>
+            </div>
+        </div>
+    </div>
+
+    @if (items != null)
+    {
+        <div class="card-dark p-0 overflow-hidden">
+            <table class="table table-dark table-hover table-striped align-middle mb-0">
+                <thead><tr class="text-warning text-uppercase small"><th class="ps-3">ID</th><th>Картинка</th><th>Название</th><th>Категория</th><th>Цена</th><th>Остаток</th><th></th></tr></thead>
+                <tbody>
+                    @foreach (var b in items)
+                    {
+                        <tr>
+                            <td>@b.BarItemID</td>
+                            <td><img src="@(string.IsNullOrEmpty(b.ImageUrl) ? "" : b.ImageUrl)" style="width:48px;height:48px;object-fit:cover;border-radius:4px;" /></td>
+                            <td>@b.ItemName</td>
+                            <td>@b.Category</td>
+                            <td>@b.Price.ToString("0") ₽</td>
+                            <td>@b.StockCount</td>
+                            <td><button class="btn btn-sm btn-outline-danger" @onclick="() => DoDelete(b.BarItemID)"><i class="bi bi-trash"></i></button></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+}
+
+@code {
+    private List<BarItemDto>? items;
+    private List<BarCategoryDto> cats = new();
+    private AddBarItemModel add = new();
+    private bool uploading;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var rc = await Api.Get("/cinema/refs/barcategories");
+        if (rc != null && rc.Value.TryGetProperty("categories", out var ac))
+            cats = JsonSerializer.Deserialize<List<BarCategoryDto>>(ac.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+        await Load();
+    }
+
+    private async Task Load()
+    {
+        var r = await Api.Get("/cinema/bar");
+        if (r != null && r.Value.TryGetProperty("items", out var arr))
+            items = JsonSerializer.Deserialize<List<BarItemDto>>(arr.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+    }
+
+    private async Task OnImagePicked(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+        if (file == null) return;
+        uploading = true;
+        try
+        {
+            using var content = new MultipartFormDataContent();
+            using var stream = file.OpenReadStream(maxAllowedSize: 5 * 1024 * 1024);
+            using var sc = new StreamContent(stream);
+            sc.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
+            content.Add(sc, "file", file.Name);
+
+            if (!string.IsNullOrEmpty(Auth.Token))
+                Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Auth.Token);
+
+            var resp = await Http.PostAsync("/cinema/upload", content);
+            var txt = await resp.Content.ReadAsStringAsync();
+            var json = JsonDocument.Parse(txt).RootElement;
+            if (json.GetProperty("status").GetBoolean())
+            {
+                add.ImageUrl = json.GetProperty("url").GetString();
+                Toast.Success("Картинка загружена");
+            }
+            else Toast.Error(json.TryGetProperty("message", out var m) ? m.GetString() ?? "Ошибка" : "Ошибка");
+        }
+        catch (Exception ex) { Toast.Error("Ошибка: " + ex.Message); }
+        uploading = false;
+    }
+
+    private async Task DoAdd()
+    {
+        if (string.IsNullOrWhiteSpace(add.ItemName)) { Toast.Error("Введите название"); return; }
+        if (string.IsNullOrWhiteSpace(add.ItemDescription)) { Toast.Error("Введите описание"); return; }
+        if (add.BarCategoryID <= 0) { Toast.Error("Выберите категорию"); return; }
+        if (add.Price <= 0) { Toast.Error("Цена должна быть больше 0"); return; }
+        if (add.StockCount <= 0) { Toast.Error("Остаток должен быть больше 0"); return; }
+
+        var r = await Api.Post("/cinema/admin/baritem", add);
+        if (r == null) { Toast.Error("Сервер не отвечает"); return; }
+        if (r.Value.GetProperty("status").GetBoolean())
+        {
+            Toast.Success("Товар добавлен");
+            add = new();
+            await Load();
+        }
+        else Toast.Error(r.Value.TryGetProperty("message", out var m) ? m.GetString() ?? "Ошибка" : "Ошибка");
+    }
+
+    private async Task DoDelete(int id)
+    {
+        var r = await Api.Delete($"/cinema/admin/baritem/{id}");
+        if (r != null && r.Value.GetProperty("status").GetBoolean())
+        {
+            Toast.Success("Удалено");
+            await Load();
+        }
+        else Toast.Error("Ошибка удаления");
+    }
+}

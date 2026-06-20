@@ -1,0 +1,580 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\admin\\baritems.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\admin\\baritems.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\services\\api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\services\\api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\services\\hubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\services\\hubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\services\\authstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\services\\authstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\services\\toast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\services\\toast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\cashierbar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\cashierbar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\mytickets.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\mytickets.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\cashier.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\cashier.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\buy.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\buy.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\moviepage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\moviepage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\todayshows.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\todayshows.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\afisha.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\afisha.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\admin\\users.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\admin\\users.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\layout\\topnav.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\layout\\topnav.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\layout\\toastbar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\layout\\toastbar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\scan.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\scan.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\mybar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\mybar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\cashiershift.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\cashiershift.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\bar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\bar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\account.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\account.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\admin\\shows.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\admin\\shows.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\admin\\sales.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\admin\\sales.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\admin\\promos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\admin\\promos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\admin\\movies.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\admin\\movies.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\admin\\halls.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\admin\\halls.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\pages\\admin\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\pages\\admin\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\requests\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\requests\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\models\\promodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\models\\promodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|d:\\studying\\3_course\\_\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0443\u043F 2\\cinema\\razor\\cinemarazor\\models\\baritemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D34567-9F2A-4B5C-8765-2345678901CD}|CinemaRazor\\CinemaRazor.csproj|solutionrelative:cinemarazor\\models\\baritemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Cashier.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Cashier.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Cashier.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Cashier.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Cashier.razor",
+              "ViewState": "AgIAAJIAAAAAAAAAAAD4v4YAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T11:26:25.278Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Buy.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Buy.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Buy.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Buy.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Buy.razor",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAFMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T11:25:29.417Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Layout\\MainLayout.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "CinemaRazor\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T19:43:12.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CashierBar.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\CashierBar.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\CashierBar.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\CashierBar.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\CashierBar.razor",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:36:51.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Api.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Services\\Api.cs",
+              "RelativeDocumentMoniker": "CinemaRazor\\Services\\Api.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Services\\Api.cs",
+              "RelativeToolTip": "CinemaRazor\\Services\\Api.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwB0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:44:06.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthState.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Services\\AuthState.cs",
+              "RelativeDocumentMoniker": "CinemaRazor\\Services\\AuthState.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Services\\AuthState.cs",
+              "RelativeToolTip": "CinemaRazor\\Services\\AuthState.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T17:54:26.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Toast.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Services\\Toast.cs",
+              "RelativeDocumentMoniker": "CinemaRazor\\Services\\Toast.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Services\\Toast.cs",
+              "RelativeToolTip": "CinemaRazor\\Services\\Toast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:44:47.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BarItems.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\BarItems.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Admin\\BarItems.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\BarItems.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Admin\\BarItems.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:33:22.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HubService.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Services\\HubService.cs",
+              "RelativeDocumentMoniker": "CinemaRazor\\Services\\HubService.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Services\\HubService.cs",
+              "RelativeToolTip": "CinemaRazor\\Services\\HubService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:44:36.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MyTickets.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\MyTickets.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\MyTickets.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\MyTickets.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\MyTickets.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:37:47.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Home.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Home.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Home.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:23:33.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TodayShows.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\TodayShows.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\TodayShows.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\TodayShows.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\TodayShows.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T19:43:38.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Afisha.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Afisha.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Afisha.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Afisha.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Afisha.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T19:35:48.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MoviePage.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\MoviePage.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\MoviePage.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\MoviePage.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\MoviePage.razor",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:37:24.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TopNav.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Layout\\TopNav.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Layout\\TopNav.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Layout\\TopNav.razor",
+              "RelativeToolTip": "CinemaRazor\\Layout\\TopNav.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T19:43:19.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Users.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Users.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Admin\\Users.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Users.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Admin\\Users.razor",
+              "ViewState": "AgIAABkAAAAAAAAAAAD4vz0AAACaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:34:58.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ToastBar.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Layout\\ToastBar.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Layout\\ToastBar.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Layout\\ToastBar.razor",
+              "RelativeToolTip": "CinemaRazor\\Layout\\ToastBar.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T19:43:14.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "app.css",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\wwwroot\\css\\app.css",
+              "RelativeDocumentMoniker": "CinemaRazor\\wwwroot\\css\\app.css",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\wwwroot\\css\\app.css",
+              "RelativeToolTip": "CinemaRazor\\wwwroot\\css\\app.css",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-06T18:15:39.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MyBar.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\MyBar.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\MyBar.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\MyBar.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\MyBar.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:37:35.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Scan.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Scan.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Scan.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Scan.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Scan.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:37:58.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Bar.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Bar.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Bar.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Bar.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Bar.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:36:13.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Account.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Account.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Account.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Account.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Account.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T11:18:26.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CashierShift.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\CashierShift.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\CashierShift.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\CashierShift.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\CashierShift.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T12:02:37.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Shows.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Shows.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Admin\\Shows.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Shows.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Admin\\Shows.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:34:41.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Sales.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Sales.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Admin\\Sales.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Sales.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Admin\\Sales.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:34:29.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Promos.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Promos.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Admin\\Promos.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Promos.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Admin\\Promos.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:34:16.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Movies.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Movies.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Admin\\Movies.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Movies.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Admin\\Movies.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T19:37:02.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Halls.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Halls.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Admin\\Halls.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Halls.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Admin\\Halls.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:34:03.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Dashboard.razor",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Dashboard.razor",
+              "RelativeDocumentMoniker": "CinemaRazor\\Pages\\Admin\\Dashboard.razor",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Pages\\Admin\\Dashboard.razor",
+              "RelativeToolTip": "CinemaRazor\\Pages\\Admin\\Dashboard.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-06T17:33:50.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Models.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Requests\\Models.cs",
+              "RelativeDocumentMoniker": "CinemaRazor\\Requests\\Models.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Requests\\Models.cs",
+              "RelativeToolTip": "CinemaRazor\\Requests\\Models.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:43:41.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "PromoDto.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Models\\PromoDto.cs",
+              "RelativeDocumentMoniker": "CinemaRazor\\Models\\PromoDto.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Models\\PromoDto.cs",
+              "RelativeToolTip": "CinemaRazor\\Models\\PromoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:43:34.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "BarItemDto.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Models\\BarItemDto.cs",
+              "RelativeDocumentMoniker": "CinemaRazor\\Models\\BarItemDto.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Models\\BarItemDto.cs",
+              "RelativeToolTip": "CinemaRazor\\Models\\BarItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:43:29.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Program.cs",
+              "RelativeDocumentMoniker": "CinemaRazor\\Program.cs",
+              "ToolTip": "D:\\Studying\\3_course\\_\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u0423\u041F 2\\Cinema\\Razor\\CinemaRazor\\Program.cs",
+              "RelativeToolTip": "CinemaRazor\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T19:00:51.949Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

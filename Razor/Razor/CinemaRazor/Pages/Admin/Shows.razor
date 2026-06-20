@@ -1,0 +1,110 @@
+﻿@page "/admin/shows"
+@using CinemaRazor.Models
+@using CinemaRazor.Requests
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+
+<PageTitle>Сеансы</PageTitle>
+
+<div class="page-header">
+    <div><h1 class="page-title">Сеансы</h1><p class="page-subtitle">Создание расписания</p></div>
+</div>
+
+@if (!Auth.IsAdmin)
+{
+    <div class="alert alert-danger">Только админу</div>
+}
+else
+{
+    <div class="card-dark mb-3">
+        <h5 class="section-title">Новый сеанс</h5>
+        <div class="row g-2">
+            <div class="col-12 col-md-3">
+                <label class="app-label">Фильм</label>
+                <select class="form-select" @bind="add.MovieID">
+                    <option value="0">— выберите —</option>
+                    @if (movies != null)
+                        foreach (var m in movies) { <option value="@m.MovieID">@m.Title</option> }
+                </select>
+            </div>
+            <div class="col-12 col-md-3">
+                <label class="app-label">Зал</label>
+                <select class="form-select" @bind="add.HallID">
+                    <option value="0">— выберите —</option>
+                    @if (halls != null)
+                        foreach (var h in halls) { <option value="@h.HallID">@h.HallName</option> }
+                </select>
+            </div>
+            <div class="col-12 col-md-3">
+                <label class="app-label">Дата и время</label>
+                <input class="form-control" type="datetime-local"
+                       min="@MinStr"
+                       value="@(add.StartTime.ToString("yyyy-MM-ddTHH:mm"))"
+                       @onchange="OnDateChanged" />
+            </div>
+            <div class="col-6 col-md-2">
+                <label class="app-label">Цена</label>
+                <input class="form-control" type="number" min="1" @bind="add.BasePrice" />
+            </div>
+            <div class="col-6 col-md-1 d-flex align-items-end"><button class="btn btn-warning w-100" @onclick="DoAdd">+</button></div>
+        </div>
+        @if (!string.IsNullOrEmpty(msg)) { <div class="alert alert-success mt-2">@msg</div> }
+        @if (!string.IsNullOrEmpty(err)) { <div class="alert alert-danger mt-2">@err</div> }
+    </div>
+}
+
+@inject CinemaRazor.Services.Toast Toast
+
+@code {
+    private List<MovieDto>? movies;
+    private List<HallDto>? halls;
+    private AddShowModel add = new() { StartTime = DateTime.Now.AddDays(1).Date.AddHours(18) };
+    private string? msg;
+    private string? err;
+    private string MinStr => DateTime.Now.ToString("yyyy-MM-ddTHH:mm");
+
+    private void OnDateChanged(ChangeEventArgs e)
+    {
+        if (DateTime.TryParse(e.Value?.ToString(), out var dt))
+            add.StartTime = dt;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var rm = await Api.Get("/cinema/movies");
+        if (rm != null && rm.Value.TryGetProperty("movies", out var arr))
+            movies = JsonSerializer.Deserialize<List<MovieDto>>(arr.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+
+        var rh = await Api.Get("/cinema/admin/halls");
+        if (rh != null && rh.Value.TryGetProperty("halls", out var arr2))
+            halls = JsonSerializer.Deserialize<List<HallDto>>(arr2.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+    }
+
+    private async Task DoAdd()
+    {
+        msg = null; err = null;
+        if (add.MovieID == 0 || add.HallID == 0) { Toast.Error("Выберите фильм и зал"); return; }
+        if (add.BasePrice <= 0) { Toast.Error("Цена должна быть больше 0"); return; }
+        if (add.StartTime <= DateTime.Now) { Toast.Error("Дата сеанса не может быть в прошлом"); return; }
+
+        var sendModel = new AddShowModel
+        {
+            MovieID = add.MovieID,
+            HallID = add.HallID,
+            BasePrice = add.BasePrice,
+            StartTime = DateTime.SpecifyKind(add.StartTime, DateTimeKind.Local).ToUniversalTime()
+        };
+        var r = await Api.Post("/cinema/admin/show", sendModel);
+        if (r == null) { Toast.Error("Нет ответа"); return; }
+        if (r.Value.GetProperty("status").GetBoolean())
+        {
+            Toast.Success(r.Value.GetProperty("message").GetString() ?? "Сеанс создан");
+            add = new() { StartTime = DateTime.Now.AddDays(1).Date.AddHours(18) };
+        }
+        else Toast.Error(r.Value.GetProperty("message").GetString() ?? "Ошибка");
+    }
+}

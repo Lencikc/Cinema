@@ -1,0 +1,59 @@
+﻿@page "/my-bar"
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+
+<PageTitle>Мои бар-заказы</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h1 class="page-title">Мои заказы из бара</h1>
+        <p class="page-subtitle">История ваших заказов</p>
+    </div>
+</div>
+
+@if (data == null)
+{
+    <div class="card-dark"><p class="page-subtitle text-center">Загрузка...</p></div>
+}
+else if (!data.Value.TryGetProperty("orders", out var arr) || arr.GetArrayLength() == 0)
+{
+    <div class="card-dark"><p class="page-subtitle text-center">Заказов пока нет</p></div>
+}
+else
+{
+    <div class="row g-3">
+        @foreach (var o in arr.EnumerateArray())
+        {
+            <div class="col-12 col-md-6">
+                <div class="card-dark">
+                    <div class="d-flex justify-content-between mb-2">
+                        <h5 class="section-title mb-0">Заказ #@o.GetProperty("barOrderID").GetInt32()</h5>
+                        <span class="hero-chip">@o.GetProperty("status").GetString()</span>
+                    </div>
+                    <ul style="color:#d6d3d1; padding-left:18px;">
+                        @foreach (var item in o.GetProperty("items").EnumerateArray())
+                        {
+                            <li>@item.GetProperty("itemName").GetString() × @item.GetProperty("count").GetInt32()</li>
+                        }
+                    </ul>
+                    <div class="d-flex justify-content-between mt-2">
+                        <span style="color:#a8a29e;">@o.GetProperty("createdAt").GetDateTime().ToLocalTime().ToString("dd.MM HH:mm")</span>
+                        <span style="color:#fbbf24; font-weight:700;">@o.GetProperty("totalSum").GetDecimal().ToString("0") ₽</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private JsonElement? data;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!Auth.IsViewer) return;
+        data = await Api.Get($"/cinema/user/{Auth.Current!.UserID}/bar/orders");
+    }
+}

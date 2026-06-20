@@ -1,0 +1,66 @@
+﻿@page "/scan"
+@using CinemaRazor.Requests
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+
+<PageTitle>Сканировать билет</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h1 class="page-title">Сканирование билета</h1>
+        <p class="page-subtitle">Введите код с QR или со штрихкода</p>
+    </div>
+</div>
+
+@if (!Auth.IsScanner && !Auth.IsAdmin)
+{
+    <div class="alert alert-warning">Доступ только для контролёров</div>
+}
+else
+{
+    <div class="card-dark" style="max-width:640px;">
+        <label class="app-label">QR-код / Номер</label>
+        <div class="d-flex gap-2">
+            <input class="form-control" @bind="code" @bind:event="oninput" @onkeydown="OnKey" placeholder="CINEMA-..." />
+            <button class="btn btn-warning" @onclick="DoCheck"><i class="bi bi-qr-code"></i></button>
+        </div>
+
+        @if (result.HasValue)
+        {
+            var r = result.Value;
+            var ok = r.GetProperty("status").GetBoolean();
+            <div class="alert mt-3 @(ok ? "alert-success" : "alert-danger")">
+                <strong>@r.GetProperty("message").GetString()</strong>
+                @if (ok && r.TryGetProperty("ticket", out var t))
+                {
+                    <div class="mt-2">
+                        Фильм: @t.GetProperty("movie").GetString()<br />
+                        Зал: @t.GetProperty("hall").GetString()<br />
+                        Сеанс: @t.GetProperty("startTime").GetDateTime().ToLocalTime().ToString("dd.MM HH:mm")<br />
+                        @t.GetProperty("place").GetString()
+                    </div>
+                }
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private string code = "";
+    private JsonElement? result;
+
+    private async Task OnKey(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter") await DoCheck();
+    }
+
+    private async Task DoCheck()
+    {
+        if (string.IsNullOrWhiteSpace(code)) return;
+        var r = await Api.Post("/cinema/scan", new CheckTicketModel { QrCode = code });
+        result = r;
+        code = "";
+    }
+}

@@ -1,0 +1,54 @@
+﻿@page "/admin/sales"
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+
+<PageTitle>Продажи</PageTitle>
+
+<div class="page-header">
+    <div><h1 class="page-title">Отчёт по продажам</h1><p class="page-subtitle">За текущий месяц</p></div>
+</div>
+
+@if (!Auth.IsAdmin)
+{
+    <div class="alert alert-danger">Только админу</div>
+}
+else if (data == null)
+{
+    <div class="card-dark"><p class="page-subtitle text-center">Загрузка...</p></div>
+}
+else
+{
+    var totals = data.Value.GetProperty("report").GetProperty("totals");
+    <div class="row g-3 mb-3">
+        <div class="col-12 col-md-4"><div class="dash-tile"><div class="dash-tile-label">Продано билетов</div><div class="dash-tile-value">@totals.GetProperty("totalSold").GetInt32()</div></div></div>
+        <div class="col-12 col-md-4"><div class="dash-tile"><div class="dash-tile-label">Возвратов</div><div class="dash-tile-value">@totals.GetProperty("totalRefund").GetInt32()</div></div></div>
+        <div class="col-12 col-md-4"><div class="dash-tile"><div class="dash-tile-label">Выручка всего</div><div class="dash-tile-value" style="color:#fbbf24;">@totals.GetProperty("revenueAll").GetDecimal().ToString("0") ₽</div></div></div>
+    </div>
+    <div class="card-dark p-0 overflow-hidden">
+        <div class="px-4 pt-3"><h5 class="section-title">По дням (текущий месяц)</h5></div>
+        <table class="table table-dark table-hover table-striped align-middle mb-0">
+            <thead><tr class="text-warning text-uppercase small"><th class="ps-3">Дата</th><th>Билетов</th><th class="text-end pe-3">Сумма</th></tr></thead>
+            <tbody>
+                @foreach (var d in data.Value.GetProperty("report").GetProperty("byDay").EnumerateArray())
+                {
+                    <tr>
+                        <td>@d.GetProperty("day").GetDateTime().ToString("dd.MM.yyyy")</td>
+                        <td>@d.GetProperty("count").GetInt32()</td>
+                        <td class="text-end">@d.GetProperty("sum").GetDecimal().ToString("0") ₽</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    private JsonElement? data;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Auth.IsAdmin) data = await Api.Get("/cinema/admin/sales");
+    }
+}

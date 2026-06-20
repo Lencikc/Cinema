@@ -1,0 +1,138 @@
+﻿@page "/buy/{Id:int}"
+@implements IAsyncDisposable
+@using CinemaRazor.Models
+@using CinemaRazor.Requests
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+@inject HubService Hub
+@inject NavigationManager Nav
+
+<PageTitle>Бронирование</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h1 class="page-title">Выбор мест</h1>
+        <p class="page-subtitle">Выберите свободные места и оплатите билеты</p>
+    </div>
+</div>
+
+@if (!Auth.IsViewer)
+{
+    <div class="alert alert-warning">Только зрителям. Войдите в систему.</div>
+}
+else if (map == null)
+{
+    <div class="card-dark"><p class="page-subtitle text-center">Загрузка...</p></div>
+}
+else
+{
+    <div class="card-dark">
+        <div class="screen-label">SCREEN</div>
+        <div class="seat-map">
+            <div class="screen"></div>
+            @foreach (var row in map.Rows)
+            {
+                <div class="seat-row">
+                    <div class="row-num">@row.RowNumber</div>
+                    @foreach (var s in row.Seats)
+                    {
+                        var picked = picks.Any(p => p.RowNumber == s.Row && p.SeatNumber == s.Seat);
+                        var cls = "seat" + (s.Taken ? " taken" : "") + (picked ? " selected" : "");
+                        <div class="@cls" @onclick="@(() => Toggle(s))" @key="(row.RowNumber * 1000 + s.Seat)">@s.Seat</div>
+                    }
+                    <div class="row-num">@row.RowNumber</div>
+                </div>
+            }
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <div>
+                <div class="app-label">Выбрано мест</div>
+                <div style="font-size:22px; color:#fff; font-weight:700;">@picks.Count</div>
+            </div>
+            <div>
+                <div class="app-label">Сумма</div>
+                <div style="font-size:22px; color:#fbbf24; font-weight:700;">@(picks.Count * map.BasePrice) ₽</div>
+            </div>
+            <div style="max-width:240px;">
+                <label class="form-label text-warning small text-uppercase fw-bold mb-1">Промокод</label>
+                <input class="form-control bg-white text-dark border-2 border-warning" @bind="promo" placeholder="введите код" />
+            </div>
+            <button class="btn btn-warning btn-lg" disabled="@(picks.Count == 0)" @onclick="DoBuy">
+                <i class="bi bi-credit-card me-2"></i>Оплатить
+            </button>
+        </div>
+
+        @if (!string.IsNullOrEmpty(error)) { <div class="alert alert-danger mt-3">@error</div> }
+        @if (!string.IsNullOrEmpty(ok)) { <div class="alert alert-success mt-3">@ok</div> }
+    </div>
+}
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private SeatMapDto? map;
+    private List<SeatPick> picks = new();
+    private string? promo;
+    private string? error;
+    private string? ok;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Load();
+        Hub.OnSeatTaken += OnSeatTaken;
+        await Hub.ConnectAsync();
+    }
+
+    private async Task Load()
+    {
+        var r = await Api.Get($"/cinema/shows/{Id}/seats");
+        if (r != null) map = JsonSerializer.Deserialize<SeatMapDto>(r.Value.GetRawText(),
+            new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+    }
+
+    private void Toggle(SeatDto s)
+    {
+        if (s.Taken) return;
+        var ex = picks.FirstOrDefault(p => p.RowNumber == s.Row && p.SeatNumber == s.Seat);
+        if (ex != null) picks.Remove(ex);
+        else picks.Add(new SeatPick { RowNumber = s.Row, SeatNumber = s.Seat });
+    }
+
+    private void OnSeatTaken(int showId, int row, int seat)
+    {
+        if (showId != Id || map == null) return;
+        var rowDto = map.Rows.FirstOrDefault(r => r.RowNumber == row);
+        var seatDto = rowDto?.Seats.FirstOrDefault(x => x.Seat == seat);
+        if (seatDto != null) seatDto.Taken = true;
+        picks.RemoveAll(p => p.RowNumber == row && p.SeatNumber == seat);
+        InvokeAsync(StateHasChanged);
+    }
+
+    private async Task DoBuy()
+    {
+        error = null; ok = null;
+        var r = await Api.Post($"/cinema/user/{Auth.Current!.UserID}/buy",
+            new BuyTicketModel { ShowID = Id, Seats = picks, PromoCode = promo });
+        if (r == null) { error = "Нет ответа"; return; }
+        if (r.Value.GetProperty("status").GetBoolean())
+        {
+            ok = r.Value.GetProperty("message").GetString();
+            picks.Clear();
+            await Task.Delay(1000);
+            Nav.NavigateTo("/my-tickets");
+        }
+        else
+        {
+            error = r.Value.TryGetProperty("message", out var m) ? m.GetString() : "Ошибка";
+            await Load();
+        }
+    }
+
+    public ValueTask DisposeAsync()
+    {
+        Hub.OnSeatTaken -= OnSeatTaken;
+        return ValueTask.CompletedTask;
+    }
+}

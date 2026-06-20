@@ -1,0 +1,96 @@
+﻿@page "/dashboard"
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+
+<PageTitle>Дашборд</PageTitle>
+
+<div class="page-header">
+    <div><h1 class="page-title">Дашборд</h1><p class="page-subtitle">Главные показатели за сегодня</p></div>
+    <button class="btn btn-outline-light btn-sm" @onclick="Load"><i class="bi bi-arrow-clockwise"></i></button>
+</div>
+
+@if (!Auth.IsAdmin)
+{
+    <div class="alert alert-danger">Только админу</div>
+}
+else if (data == null)
+{
+    <div class="card-dark"><p class="page-subtitle text-center">Загрузка...</p></div>
+}
+else
+{
+    var d = data.Value.GetProperty("dashboard");
+    <div class="row g-3">
+        <div class="col-6 col-md-4">
+            <div class="dash-tile"><div class="dash-tile-label">Билетов сегодня</div><div class="dash-tile-value">@d.GetProperty("ticketsToday").GetInt32()</div></div>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="dash-tile"><div class="dash-tile-label">Касса фильмов</div><div class="dash-tile-value">@d.GetProperty("revenueToday").GetDecimal().ToString("0") ₽</div></div>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="dash-tile"><div class="dash-tile-label">Касса бара</div><div class="dash-tile-value">@d.GetProperty("barRevenueToday").GetDecimal().ToString("0") ₽</div></div>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="dash-tile"><div class="dash-tile-label">Всего сегодня</div><div class="dash-tile-value" style="color:#fbbf24;">@d.GetProperty("totalToday").GetDecimal().ToString("0") ₽</div></div>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="dash-tile"><div class="dash-tile-label">Сеансов</div><div class="dash-tile-value">@d.GetProperty("activeShows").GetInt32()</div></div>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="dash-tile"><div class="dash-tile-label">Зрителей</div><div class="dash-tile-value">@d.GetProperty("totalUsers").GetInt32()</div></div>
+        </div>
+    </div>
+
+    <div class="row g-3 mt-2">
+        <div class="col-12 col-lg-6">
+            <div class="card-dark">
+                <h5 class="section-title">Топ фильмов</h5>
+                <table class="table table-dark table-hover align-middle">
+                    <thead><tr><th>Фильм</th><th class="text-end">Билетов</th></tr></thead>
+                    <tbody>
+                        @foreach (var t in d.GetProperty("topMovies").EnumerateArray())
+                        {
+                            <tr><td>@t.GetProperty("title").GetString()</td><td class="text-end"><span class="hero-chip">@t.GetProperty("count").GetInt32()</span></td></tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <div class="card-dark">
+                <h5 class="section-title">Загрузка залов сегодня</h5>
+                <table class="table table-dark table-hover align-middle">
+                    <thead><tr><th>Время</th><th>Фильм</th><th>Зал</th><th class="text-end">Заполн.</th></tr></thead>
+                    <tbody>
+                        @foreach (var s in d.GetProperty("hallLoad").EnumerateArray())
+                        {
+                            var sold = s.GetProperty("sold").GetInt32();
+                            var cap = s.GetProperty("capacity").GetInt32();
+                            var pct = cap == 0 ? 0 : sold * 100 / cap;
+                            <tr>
+                                <td>@s.GetProperty("startTime").GetDateTime().ToLocalTime().ToString("HH:mm")</td>
+                                <td>@s.GetProperty("movie").GetString()</td>
+                                <td>@s.GetProperty("hall").GetString()</td>
+                                <td class="text-end">@sold/@cap (<span style="color:#fbbf24;">@pct%</span>)</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private JsonElement? data;
+
+    protected override async Task OnInitializedAsync() => await Load();
+
+    private async Task Load()
+    {
+        if (!Auth.IsAdmin) return;
+        data = await Api.Get("/cinema/admin/dashboard");
+    }
+}

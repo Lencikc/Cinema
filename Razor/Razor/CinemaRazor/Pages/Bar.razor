@@ -1,0 +1,127 @@
+﻿@page "/bar"
+@using CinemaRazor.Models
+@using CinemaRazor.Requests
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+
+<PageTitle>Бар · Cinema</PageTitle>
+
+<div class="afisha-head mb-4">
+    <div class="afisha-eyebrow">★ КИНО-БАР ★</div>
+    <h1 class="afisha-title">ПОПКОРН И ВКУСНЯШКИ</h1>
+    <div class="afisha-line"></div>
+</div>
+
+@if (items == null)
+{
+    <div class="text-center text-white-50 py-5">Загрузка...</div>
+}
+else
+{
+    <div class="row g-4">
+        <div class="col-12 col-lg-8">
+            @foreach (var cat in items.GroupBy(x => x.Category))
+            {
+                <div class="bar-category-title">@cat.Key</div>
+                <div class="row g-3 mb-4">
+                    @foreach (var b in cat)
+                    {
+                        <div class="col-12 col-sm-6">
+                            <div class="bar-item">
+                                <div class="bar-item-img">
+                                    <img src="@(string.IsNullOrEmpty(b.ImageUrl) ? $"https://picsum.photos/seed/bar{b.BarItemID}/200/200" : b.ImageUrl)"
+                                         onerror="this.onerror=null;this.src='https://picsum.photos/seed/bar' + @b.BarItemID + '/200/200'"
+                                         alt="@b.ItemName" />
+                                </div>
+                                <div class="bar-item-info">
+                                    <div class="bar-item-name">@b.ItemName</div>
+                                    <div class="bar-item-desc">@b.ItemDescription</div>
+                                    <div class="bar-item-bottom">
+                                        <span class="bar-item-price">@b.Price.ToString("0") ₽</span>
+                                        @if (Auth.IsViewer)
+                                        {
+                                            <button class="bar-item-add" @onclick="() => Add(b)">+</button>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+
+        @if (Auth.IsViewer)
+        {
+            <div class="col-12 col-lg-4">
+                <div class="bar-cart sticky-top" style="top:80px;">
+                    <h3 class="bar-cart-title">Ваш заказ</h3>
+                    @if (cart.Count == 0)
+                    {
+                        <p class="text-white-50 text-center py-4 mb-0">Пусто. Выбирайте слева →</p>
+                    }
+                    else
+                    {
+                        @foreach (var line in cart)
+                        {
+                            var item = items.First(i => i.BarItemID == line.BarItemID);
+                            <div class="bar-cart-line">
+                                <div class="flex-grow-1">
+                                    <div class="text-white">@item.ItemName</div>
+                                    <small class="text-white-50">@item.Price.ToString("0") × @line.Count</small>
+                                </div>
+                                <div class="text-warning fw-bold">@(item.Price * line.Count)</div>
+                                <button class="btn btn-sm btn-link text-danger p-0 ms-2" @onclick="() => Remove(line)">×</button>
+                            </div>
+                        }
+                        <div class="bar-cart-total">
+                            <span>Итого</span>
+                            <span class="fs-3 text-warning fw-bold">@Total ₽</span>
+                        </div>
+                        @if (!string.IsNullOrEmpty(msg)) { <div class="alert alert-success">@msg</div> }
+                        <button class="btn btn-warning w-100 fw-bold text-uppercase" style="letter-spacing:2px;" @onclick="Checkout">Оформить →</button>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<BarItemDto>? items;
+    private List<BarOrderLine> cart = new();
+    private string? msg;
+
+    private decimal Total => cart.Sum(c => items!.First(i => i.BarItemID == c.BarItemID).Price * c.Count);
+
+    protected override async Task OnInitializedAsync()
+    {
+        var r = await Api.Get("/cinema/bar");
+        if (r != null && r.Value.TryGetProperty("items", out var arr))
+            items = JsonSerializer.Deserialize<List<BarItemDto>>(arr.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+    }
+
+    private void Add(BarItemDto b)
+    {
+        var ex = cart.FirstOrDefault(c => c.BarItemID == b.BarItemID);
+        if (ex != null) ex.Count++;
+        else cart.Add(new BarOrderLine { BarItemID = b.BarItemID, Count = 1 });
+    }
+
+    private void Remove(BarOrderLine l) => cart.Remove(l);
+
+    private async Task Checkout()
+    {
+        msg = null;
+        var r = await Api.Post($"/cinema/user/{Auth.Current!.UserID}/bar/order",
+            new BarOrderModel { Lines = cart });
+        if (r != null && r.Value.GetProperty("status").GetBoolean())
+        {
+            msg = "Заказ оформлен!";
+            cart.Clear();
+        }
+    }
+}

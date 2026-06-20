@@ -1,0 +1,80 @@
+﻿@page "/my-tickets"
+@using CinemaRazor.Models
+@using System.Text.Json
+@using CinemaRazor.Services
+@inject Api Api
+@inject AuthState Auth
+
+<PageTitle>Мои билеты</PageTitle>
+
+<div class="page-header">
+    <div>
+        <h1 class="page-title">Мои билеты</h1>
+        <p class="page-subtitle">QR-код покажите контролёру при входе</p>
+    </div>
+</div>
+
+@if (!Auth.IsViewer)
+{
+    <div class="alert alert-warning">Только для зрителей</div>
+}
+else if (tickets == null)
+{
+    <div class="card-dark"><p class="page-subtitle text-center">Загрузка...</p></div>
+}
+else if (tickets.Count == 0)
+{
+    <div class="card-dark"><p class="page-subtitle text-center">Билетов пока нет</p></div>
+}
+else
+{
+    <div class="row g-3">
+        @foreach (var t in tickets)
+        {
+            <div class="col-12 col-md-6">
+                <div class="card-dark">
+                    <div class="d-flex justify-content-between mb-2">
+                        <h5 class="section-title mb-0">@t.Show.MovieTitle</h5>
+                        <span class="hero-chip">@t.Status</span>
+                    </div>
+                    <div class="page-subtitle mb-2">
+                        @t.Show.HallName • @t.Show.StartTime.ToLocalTime().ToString("dd.MM.yyyy HH:mm")
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <div class="app-label">Место</div>
+                            <div style="color:#fff; font-size:18px; font-weight:700;">Ряд @t.RowNumber, место @t.SeatNumber</div>
+                        </div>
+                        <div class="text-end">
+                            <div class="app-label">Стоимость</div>
+                            <div style="color:#fbbf24; font-size:18px; font-weight:700;">@t.Price.ToString("0") ₽</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-3 text-center" style="background:#fff; border-radius:8px;">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=@t.QrCode" alt="QR" />
+                        <div style="font-size:11px; color:#1c1917; word-break:break-all;">@t.QrCode</div>
+                    </div>
+                    @if (t.IsCheckedIn)
+                    {
+                        <div class="alert alert-success mt-2 mb-0 py-2"><i class="bi bi-check-circle me-2"></i>Использован @t.CheckedInAt?.ToLocalTime().ToString("dd.MM HH:mm")</div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<TicketDto>? tickets;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (!Auth.IsViewer) return;
+        var r = await Api.Get($"/cinema/user/{Auth.Current!.UserID}/tickets");
+        if (r != null && r.Value.TryGetProperty("tickets", out var t))
+        {
+            tickets = JsonSerializer.Deserialize<List<TicketDto>>(t.GetRawText(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
+        }
+    }
+}
